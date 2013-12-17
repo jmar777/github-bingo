@@ -1,0 +1,13 @@
+## OS Stuff
+.DS_Store*
+Thumbs.db
+
+## Misc Stuff
+*.lock
+*.log
+*.out
+*.swp
+
+## Node / Express / nodemon Stuff
+node_modules
+.monitor
