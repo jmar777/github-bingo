@@ -1,6 +1,16 @@
 module.exports = function(grunt) {
 
 	grunt.initConfig({
+		less: {
+			dist: {
+				options: {
+					compress: true
+				},
+				files: {
+					'public/dist/css/gh-bingo.min.css': 'public/src/less/gh-bingo.less'
+				}
+			}
+		},
 		concat: {
 			scripts: {
 				options: {
@@ -26,7 +36,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-less');
 
-	grunt.registerTask('default', ['concat', 'uglify']);
-	
+	grunt.registerTask('default', ['less', 'concat', 'uglify']);
 };
